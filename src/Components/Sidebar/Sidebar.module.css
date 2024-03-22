@@ -1,5 +1,31 @@
 .sidebar_wrapper{
-    width: 380px;
-    height: 100vh;
-    background: #212121;
+    width: 33%;
+    height: calc(100vh - 2rem);
+    border-radius: 0 1rem 0 0;
+    background: #110D0D;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.sidebar_wrapper h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    font-family: "Wix Madefor Text", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.sidebar_wrapper button{
+    padding: .8rem 1.5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    border: none;
+    color: #999491;
+    background: #332E2B;
+}
+
+.sidebar_wrapper button:hover{
+    background: #46403E;
+    color: #E8E2E0;
 }
