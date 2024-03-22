@@ -1,0 +1,24 @@
+.new_project_wrapper{
+    padding: 4rem 2rem;
+    width: 35rem;
+}
+
+.new_projects_menu_btn{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.new_projects_menu_btn button{
+    padding: .4rem .8rem;
+    background: transparent;
+    border-radius: .2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.new_projects_menu_btn .save_btn{
+    background: #110D0D;
+    color: #fff;
+}

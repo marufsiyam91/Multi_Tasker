@@ -1,3 +1,4 @@
+import Button from '../Button/Button'
 import styles from './Sidebar.module.css'
 
 const Sidebar = () => {
@@ -5,7 +6,7 @@ const Sidebar = () => {
     <aside className={styles.sidebar_wrapper}>
         <h2>Your Projects</h2>
         <div>
-            <button>+ Add Project</button>
+            <Button>+ Add project</Button>
         </div>
         <ul>
 
