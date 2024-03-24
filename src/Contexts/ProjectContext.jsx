@@ -14,13 +14,12 @@ const reducer = (state, action) => {
                 selectedProject: null
             };
         case 'submittedProject':
-            const {title, description, dueDate} = action.payload;
-
-            if(!title || !description || !dueDate){
-                return {
+            const {title, description, dueDate} = action.payload
+            if(title === '' || description === '' || dueDate === ''){
+                return{
                     ...state,
                     error: true
-                };
+                }
             }
             return {
                 ...state,

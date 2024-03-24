@@ -5,9 +5,13 @@ import { ProjectContext } from '../../Contexts/ProjectContext'
 
 const NewProject = () => {
 
-  const {state,dispatch} = useContext(ProjectContext)
+  const {dispatch} = useContext(ProjectContext)
 
-  const [submittedProject, setSubmittedProject] = useState()
+  const [submittedProject, setSubmittedProject] = useState({
+    title: '',
+    description: '',
+    dueDate: ''
+  })
 
   const handleChange = (e) => {
     const {name, value} = e.target
@@ -20,20 +24,13 @@ const NewProject = () => {
     ))
   }
 
-  const handleSubmit = () => {
-    // if(submittedProject.title === '' || submittedProject.description === '' || submittedProject.dueDate === ''){
-    //   return dispatch({type: 'submittedProject', payload: true})
-    // }
-    return dispatch({type: 'submittedProject', payload: submittedProject})
-  }
-
 
 
   return (
     <div className={styles.new_project_wrapper}>
         <menu className={styles.new_projects_menu_btn}>
             <button onClick={() => dispatch({type: 'cancel'})}>cancel</button>
-            <button onClick={handleSubmit} className={styles.save_btn}>save</button>
+            <button onClick={() => dispatch({type: 'submittedProject', payload: submittedProject})} className={styles.save_btn}>save</button>
         </menu>
         <div>
             <Input type={'text'} handleChange={handleChange} name={'title'} label={'Title'}/>
